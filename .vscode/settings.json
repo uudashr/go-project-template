@@ -1,0 +1,29 @@
+{
+    "go.autocompleteUnimportedPackages": true,
+    "go.gocodeAutoBuild": true,
+    "go.buildOnSave": "off",
+
+    "go.testOnSave": true,
+    "go.testFlags": ["-short"],
+
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--exclude-use-default=false",
+        "--enable=golint",
+        "--enable=gocyclo",
+        "--enable=goconst",
+        "--enable=unconvert",
+        "--exclude=^Error return value of `.*\\.Log` is not checked$",
+        "--exclude=^G104: Errors unhandled\\.$$",
+        "--exclude=^G304: Potential file inclusion via variable$$"
+    ],
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "vendor/": true,
+    }
+}
